@@ -2,8 +2,8 @@
 
 Servo myservo;  // create servo object to control a servo
 // twelve servo objects can be created on most boards
-int bouton = 8;
-int etatbouton = 0;
+//int bouton = 8;
+//int etatbouton = 0;
 int pos = 0;    // variable to store the servo position
 
 void setup() {
@@ -13,7 +13,7 @@ void setup() {
 
 void loop() 
 {
- etatbouton = digitalRead(bouton);
+ /*etatbouton = digitalRead(bouton);
   if(etatbouton == HIGH)
   {
     myservo.write(180);
@@ -21,14 +21,10 @@ void loop()
     Serial.println("the buton is pressed");
     myservo.write(0);
     delay(150);
-  }
-  /*for (pos = 0; pos <= 30; pos += 1) { // goes from 0 degrees to 90 degrees
-    // in steps of 1 degree
-    myservo.write(pos);               // tell servo to go to position in variable 'pos'
-    delay(100);             :          // waits 15ms for the servo to reach the position
-  }
-  for (pos = 30; pos >= 0; pos -= 1) zz{ // goes from 90 degrees to 0 degrees
-    myservo.write(pos);              // tell servo to go to position in variable 'pos'
-    delay(50);                       // waits 15ms for the servo to reach the position
   }*/
+ 
+           myservo.write(5);  // Positionnement du servo à 5°
+              delay(20000);  // délais d'une seconde
+              myservo.write(175); // Positionnement du servo à 175°            
+              delay(2000);  // délais d'une seconde   
 }
